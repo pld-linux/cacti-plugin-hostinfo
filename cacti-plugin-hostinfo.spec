@@ -18,11 +18,15 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		webcactipluginroot /usr/share/cacti/plugins/%{namesrc}
 
 %description
-Plugin for Cacti - This plugin displays information about your Host for
-use in Bug Reports.
+Plugin for Cacti - This plugin will give you version information about
+your Cacti server. It outputs everything from Web server information,
+to php, mysql, rrdtool, and snmp versions. It will also give you the
+information in BBCode format to easily allow you to post it to a
+forum.
 
 %description -l pl
-Wtyczka do Cacti wy¶wietlaj±ca informacje o urz±dzeniu.
+Wtyczka do Cacti wy¶wietlaj±ca informacje o serwerze na którym
+uruchomiono cacti.
 
 %prep
 %setup -q -n %{namesrc}
