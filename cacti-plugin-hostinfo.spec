@@ -20,13 +20,16 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Plugin for Cacti - This plugin will give you version information about
 your Cacti server. It outputs everything from Web server information,
-to php, mysql, rrdtool, and snmp versions. It will also give you the
+to PHP, MySQL, RRDtool, and SNMP versions. It will also give you the
 information in BBCode format to easily allow you to post it to a
 forum.
 
 %description -l pl
 Wtyczka do Cacti wy¶wietlaj±ca informacje o serwerze na którym
-uruchomiono cacti.
+uruchomiono cacti. Podaje wszystkie informacje pocz±wszy od serwera
+WWW, a koñcz±c na wersjach PHP, MySQL-a, RRDtoola i SNMP. Podaje tak¿e
+informacje w formacie BBCode, umo¿liwiaj±c ³atwe wys³anie ich na
+forum.
 
 %prep
 %setup -q -n %{namesrc}
