@@ -1,7 +1,7 @@
 %define		namesrc	 hostinfo
 %include	/usr/lib/rpm/macros.perl
 Summary:	Plugin for Cacti -  Host info
-Summary(pl):	Wtyczka do Cacti -  Host info
+Summary(pl.UTF-8):   Wtyczka do Cacti -  Host info
 Name:		cacti-plugin-hostinfo
 Version:	0.1
 Release:	0.1
@@ -24,11 +24,11 @@ to PHP, MySQL, RRDtool, and SNMP versions. It will also give you the
 information in BBCode format to easily allow you to post it to a
 forum.
 
-%description -l pl
-Wtyczka do Cacti wy¶wietlaj±ca informacje o serwerze na którym
-uruchomiono cacti. Podaje wszystkie informacje pocz±wszy od serwera
-WWW, a koñcz±c na wersjach PHP, MySQL-a, RRDtoola i SNMP. Podaje tak¿e
-informacje w formacie BBCode, umo¿liwiaj±c ³atwe wys³anie ich na
+%description -l pl.UTF-8
+Wtyczka do Cacti wyÅ›wietlajÄ…ca informacje o serwerze na ktÃ³rym
+uruchomiono cacti. Podaje wszystkie informacje poczÄ…wszy od serwera
+WWW, a koÅ„czÄ…c na wersjach PHP, MySQL-a, RRDtoola i SNMP. Podaje takÅ¼e
+informacje w formacie BBCode, umoÅ¼liwiajÄ…c Å‚atwe wysÅ‚anie ich na
 forum.
 
 %prep
