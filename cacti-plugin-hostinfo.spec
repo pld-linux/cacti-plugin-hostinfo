@@ -1,7 +1,7 @@
 %define		namesrc	 hostinfo
 %include	/usr/lib/rpm/macros.perl
 Summary:	Plugin for Cacti -  Host info
-Summary(pl.UTF-8):   Wtyczka do Cacti -  Host info
+Summary(pl.UTF-8):	Wtyczka do Cacti -  Host info
 Name:		cacti-plugin-hostinfo
 Version:	0.1
 Release:	0.1
