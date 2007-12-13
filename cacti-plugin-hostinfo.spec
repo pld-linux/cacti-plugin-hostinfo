@@ -3,12 +3,12 @@
 Summary:	Plugin for Cacti -  Host info
 Summary(pl.UTF-8):	Wtyczka do Cacti -  Host info
 Name:		cacti-plugin-hostinfo
-Version:	0.1
-Release:	0.1
+Version:	0.2
+Release:	1
 License:	GPL
 Group:		Applications/WWW
-Source0:	http://download.cactiusers.org/downloads/%{namesrc}-%{version}.tar.gz
-# Source0-md5:	b586fd6dc334381013f25bd19a63197b
+Source0:	http://mirror.cactiusers.org/downloads/plugins/%{namesrc}-%{version}.zip
+# Source0-md5:	e06cda8197ed5677d918737321528394
 URL:		http://www.cactiusers.org/
 #BuildRequires:	rpm-perlprov
 Requires:	cacti
@@ -32,7 +32,7 @@ informacje w formacie BBCode, umożliwiając łatwe wysłanie ich na
 forum.
 
 %prep
-%setup -q -n %{namesrc}
+%setup -q -c
 
 %install
 rm -rf $RPM_BUILD_ROOT
