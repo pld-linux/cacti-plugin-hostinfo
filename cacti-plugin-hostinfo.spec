@@ -1,4 +1,4 @@
-%define		namesrc	 hostinfo
+%define		plugin hostinfo
 %include	/usr/lib/rpm/macros.perl
 Summary:	Plugin for Cacti -  Host info
 Summary(pl.UTF-8):	Wtyczka do Cacti -  Host info
@@ -7,7 +7,7 @@ Version:	0.2
 Release:	1
 License:	GPL
 Group:		Applications/WWW
-Source0:	http://mirror.cactiusers.org/downloads/plugins/%{namesrc}-%{version}.zip
+Source0:	http://mirror.cactiusers.org/downloads/plugins/%{plugin}-%{version}.zip
 # Source0-md5:	e06cda8197ed5677d918737321528394
 URL:		http://www.cactiusers.org/
 BuildRequires:	rpm-perlprov
@@ -15,7 +15,8 @@ Requires:	cacti
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		webcactipluginroot /usr/share/cacti/plugins/%{namesrc}
+%define		cactidir		/usr/share/cacti
+%define		plugindir		%{cactidir}/plugins/%{plugin}
 
 %description
 Plugin for Cacti - This plugin will give you version information about
@@ -36,12 +37,12 @@ forum.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{webcactipluginroot}
-cp -a * $RPM_BUILD_ROOT%{webcactipluginroot}
+install -d $RPM_BUILD_ROOT%{plugindir}
+cp -a . $RPM_BUILD_ROOT%{plugindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{webcactipluginroot}
+%{plugindir}
