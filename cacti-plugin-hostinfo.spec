@@ -1,18 +1,21 @@
 %define		plugin hostinfo
-%include	/usr/lib/rpm/macros.perl
+%define		php_min_version 5.0.0
+%include	/usr/lib/rpm/macros.php
 Summary:	Plugin for Cacti -  Host info
 Summary(pl.UTF-8):	Wtyczka do Cacti -  Host info
-Name:		cacti-plugin-hostinfo
+Name:		cacti-plugin-%{plugin}
 Version:	0.2
-Release:	1
-License:	GPL
+Release:	2
+License:	GPL v2
 Group:		Applications/WWW
 Source0:	http://mirror.cactiusers.org/downloads/plugins/%{plugin}-%{version}.zip
 # Source0-md5:	e06cda8197ed5677d918737321528394
 URL:		http://www.cactiusers.org/
-BuildRequires:	rpm-perlprov
+BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	unzip
 Requires:	cacti
+Requires:	php-common >= 4:%{php_min_version}
+Requires:	php-mysql
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -34,12 +37,12 @@ informacje w formacie BBCode, umożliwiając łatwe wysłanie ich na
 forum.
 
 %prep
-%setup -q -c
+%setup -qc
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{plugindir}
-cp -a . $RPM_BUILD_ROOT%{plugindir}
+cp -p *.php $RPM_BUILD_ROOT%{plugindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
