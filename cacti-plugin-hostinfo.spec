@@ -5,7 +5,7 @@ Summary:	Plugin for Cacti -  Host info
 Summary(pl.UTF-8):	Wtyczka do Cacti -  Host info
 Name:		cacti-plugin-%{plugin}
 Version:	0.2
-Release:	2
+Release:	6
 License:	GPL v2
 Group:		Applications/WWW
 Source0:	http://mirror.cactiusers.org/downloads/plugins/%{plugin}-%{version}.zip
@@ -14,8 +14,8 @@ URL:		http://www.cactiusers.org/
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	unzip
 Requires:	cacti
+Requires:	php(mysql)
 Requires:	php-common >= 4:%{php_min_version}
-Requires:	php-mysql
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
