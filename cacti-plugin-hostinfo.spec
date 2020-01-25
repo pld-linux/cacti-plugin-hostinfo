@@ -1,6 +1,5 @@
 %define		plugin hostinfo
 %define		php_min_version 5.0.0
-%include	/usr/lib/rpm/macros.php
 Summary:	Plugin for Cacti -  Host info
 Summary(pl.UTF-8):	Wtyczka do Cacti -  Host info
 Name:		cacti-plugin-%{plugin}
